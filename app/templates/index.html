@@ -1,0 +1,28 @@
+{% extends "app.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+   {% if messages %}
+      {% for category, message in messages %}
+         <p class="flash-container {{ category }}">{{ message }}</p>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<div class="content-container">
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu leo vitae enim condimentum suscipit ac at nibh. Pellentesque sollicitudin tempor purus, nec congue metus aliquet non. Integer dictum egestas quam, quis blandit elit porta ac. Aenean quis vulputate metus. Sed eget imperdiet ante. Pellentesque rhoncus diam pretium, tempus nibh elementum, ornare nisi. Etiam ut mauris at nulla gravida sollicitudin vitae ut magna. Donec id turpis aliquam, varius purus non, feugiat sapien.</p>
+
+   <p>
+   Maecenas lobortis, nisl sit amet elementum tempus, nulla odio molestie enim, et posuere diam enim eu est. Proin ultricies, sem eget auctor faucibus, metus eros ullamcorper ante, eget efficitur lorem arcu sed odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur pellentesque turpis eu eros imperdiet blandit. Aenean quam odio, cursus sed placerat ut, sagittis quis massa. Aenean cursus sapien at tincidunt consequat.
+</p>
+
+   <p>
+      Fusce semper tortor non nunc pretium, eu suscipit risus dapibus. Cras molestie orci id dui tristique auctor. Nulla mi lorem, dapibus in leo et, rutrum vulputate justo. Vivamus ac tempor augue. Vivamus feugiat cursus laoreet. Quisque aliquam consequat scelerisque. Aenean pellentesque odio vitae ullamcorper fringilla. Pellentesque et pretium enim. Quisque mattis a nulla sed feugiat. Curabitur mauris ante, mattis eget posuere id, tempus at turpis.
+   </p>
+
+   <p>Email Me: <a href="mailto:blah@gmail.com">blah@gmail.com</a></p>
+</div>
+
+
+{% endblock %}
